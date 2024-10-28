@@ -95,7 +95,7 @@ if [ $(cat inventory/hosts  | grep -Po '(?<=ansible_connection=)([a-z].*)') == "
      echo "Deploying dhis2 with lxd ..."
      # Ensure you community general callections are upgraded, 
      ansible-galaxy collection install community.general --upgrade
-     sudo ansible-playbook dhis2.yml
+     ansible-playbook dhis2.yml
   else
      # deploying dhis2 over ssh
      echo "Deploy dhis2 over ssh ..."
